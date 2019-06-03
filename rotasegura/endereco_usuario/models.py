@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 class EnderecoUsuario(models.Model):
     nome = models.CharField(max_length=100)
-    usuario = models.ForeignKey(User, related_name="endereco_usuario", on_delete=models.CASCADE, null=True)
+    usuario = models.ForeignKey(User, related_name="endereco_usuario", on_delete=models.CASCADE)
     latitude = models.CharField(max_length=100)
     longitude = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
