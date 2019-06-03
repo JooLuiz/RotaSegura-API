@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'knox',
     'accounts',
     'tipo_denuncia',
-    'endereco_usuario'
+    'endereco_usuario',
+    'denuncias'
 ]
 
 REST_FRAMEWORK = {
