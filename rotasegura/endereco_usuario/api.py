@@ -11,7 +11,7 @@ class EnderecoUsuarioViewSet(viewsets.ModelViewSet):
     serializer_class = EnderecoUsuarioSerializer
 
     def get_queryset(self):
-        return self.request.User.endereco_usuario.all()
+        return self.request.user.endereco_usuario.all()
     
     def perform_create(self, serializer):
-        serializer.save(usuario=self.request.User)
+        serializer.save(usuario=self.request.user)
