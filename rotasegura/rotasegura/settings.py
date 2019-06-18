@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'tipo_denuncia',
     'endereco_usuario',
     'denuncias',
-    'usuario_denuncia'
+    'usuario_denuncia',
+    'frontend'
 ]
 
 REST_FRAMEWORK = {
