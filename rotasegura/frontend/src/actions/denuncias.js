@@ -40,7 +40,7 @@ export const deleteDenuncia = id => (dispatch, getState) => {
 //ADD de denuncia
 export const addDenuncia = Denuncia => (dispatch, getState) => {
   axios
-    .post("/api/denuncia/", Denuncia, tokenConfig(getState))
+    .post("/api/denuncias/", Denuncia, tokenConfig(getState))
     .then(res => {
       dispatch(
         createMessage({ addDenuncia: "Categoria da Denúncia Registrada" })

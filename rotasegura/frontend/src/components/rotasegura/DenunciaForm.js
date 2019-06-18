@@ -24,10 +24,11 @@ export class DenunciaForm extends Component {
     const { descricao, tipo_denuncia } = this.state;
     const denuncia = { descricao, tipo_denuncia };
 
-    this.props.addTipoDenuncia(denuncia);
+    this.props.addDenuncia(denuncia);
 
     this.setState({
-      descricao: ""
+      descricao: "",
+      tipo_denuncia: ""
     });
   };
 
@@ -36,7 +37,7 @@ export class DenunciaForm extends Component {
     return (
       <div className="container">
         <div className="card card-body mt-4 mb-4">
-          <h2>Adicionar Tipo de Denuncia</h2>
+          <h2>Adicionar Categoria de Denuncia</h2>
           <form onSubmit={this.onSubmit}>
             <div className="form-group">
               <label>Descricao</label>
