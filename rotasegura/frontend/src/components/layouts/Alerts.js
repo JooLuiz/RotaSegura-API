@@ -35,6 +35,18 @@ export class Alerts extends Component {
       if (message.addDenunciaUsuario) {
         alert.success(message.addDenunciaUsuario);
       }
+      if (message.deleteTipoDenuncia) {
+        alert.success(message.deleteTipoDenuncia);
+      }
+      if (message.addTipoDenuncia) {
+        alert.success(message.addTipoDenuncia);
+      }
+      if (message.addDenuncia) {
+        alert.success(message.addDenuncia);
+      }
+      if (message.deleteDenuncia) {
+        alert.success(message.deleteDenuncia);
+      }
       if (message.passwordNotMatch) {
         alert.error(message.passwordNotMatch);
       }

@@ -16,10 +16,10 @@ export class Header extends Component {
     const authLinks = (
       <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
         <Link to="/denuncia" className="nav-link">
-          Denuncia
+          Categoria da Denúncia
         </Link>
         <Link to="/tipo_denuncia" className="nav-link">
-          Tipos de denuncia
+          Tipos de Denúncia
         </Link>
         <span className="navbar-text mr-3">
           <strong>{user ? `Bem-Vindo ${user.username}` : ""}</strong>
