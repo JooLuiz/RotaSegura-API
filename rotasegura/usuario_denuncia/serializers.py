@@ -7,3 +7,8 @@ class UsuarioDenunciaSerializer(serializers.ModelSerializer):
     class Meta:
         model = UsuarioDenuncia
         fields = '__all__'
+
+class UsuarioDenunciaAllSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UsuarioDenuncia
+        fields = ('latitude', 'longitude')
