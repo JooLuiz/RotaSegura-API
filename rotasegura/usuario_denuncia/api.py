@@ -1,6 +1,7 @@
 from usuario_denuncia.models import UsuarioDenuncia
 from rest_framework import viewsets, permissions
-from .serializers import UsuarioDenunciaSerializer
+from .serializers import UsuarioDenunciaSerializer, UsuarioDenunciaAllSerializer
+from rest_framework.decorators import action
 
 #UsuarioDenuncia ViewSet
 class UsuarioDenunciaViewSet(viewsets.ModelViewSet):
