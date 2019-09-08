@@ -4,7 +4,7 @@ from tipo_denuncia.models import TipoDenuncia
 from rest_framework import status
 from rest_framework.test import APITestCase, APIClient
 
-class TipoDenunciaTests(APITestCase):
+class DenunciaTests(APITestCase):
     def setUp(self):
         user = User.objects.create(username='testes', password='123', email='testes@email.com')
         user.save()
