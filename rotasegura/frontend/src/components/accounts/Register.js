@@ -10,7 +10,8 @@ export class Register extends Component {
     username: "",
     email: "",
     password: "",
-    password2: ""
+    password2: "",
+    cpf:""
   };
 
   static propTypes = {
@@ -20,7 +21,7 @@ export class Register extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const { password, password2, username, email } = this.state;
+    const { password, password2, username, email, cpf } = this.state;
     if (password != password2) {
       this.props.createMessage({ passwordNotMatch: "Passwords do not match" });
     } else {
@@ -34,7 +35,7 @@ export class Register extends Component {
     if (this.props.isAuthenticated) {
       return <Redirect to="/" />;
     }
-    const { username, email, password, password2 } = this.state;
+    const { username, email, password, password2, cpf } = this.state;
     return (
       <div className="col-md-6 m-auto">
         <div className="card card-body mt-5">
@@ -48,6 +49,16 @@ export class Register extends Component {
                 name="username"
                 onChange={this.onChange}
                 value={username}
+              />
+            </div>
+            <div className="form-group">
+              <label>CPF</label>
+              <input
+                type="text"
+                className="form-control"
+                name="cpf"
+                onChange={this.onChange}
+                value={cpf}
               />
             </div>
             <div className="form-group">
