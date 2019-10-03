@@ -25,7 +25,7 @@ SECRET_KEY = 'g76kenv2@vr_iwd32bjqj^e0(mu4!ze*cy+!l_2x7az_=lnpgq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['253e1534.ngrok.io']
 
 
 # Application definition
@@ -45,8 +45,11 @@ INSTALLED_APPS = [
     'denuncias',
     'usuario_denuncia',
     'frontend',
-    'all_denuncias'
+    'all_denuncias',
+    'users'
 ]
+
+AUTH_USER_MODEL = 'users.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',)
