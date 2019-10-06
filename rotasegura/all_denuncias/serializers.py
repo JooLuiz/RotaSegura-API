@@ -6,11 +6,11 @@ from denuncias.models import Denuncia
 class DenunciaDescricaoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Denuncia
-        fields = ['descricao']
+        fields = ['descricao', 'icone']
 
 class AllDenunciasSerializer(serializers.ModelSerializer):
     denuncia = DenunciaDescricaoSerializer()
 
     class Meta:
         model = UsuarioDenuncia
-        fields = ['longitude', 'latitude', 'denuncia']
+        fields = ['longitude', 'latitude', 'comentario', 'denuncia']
