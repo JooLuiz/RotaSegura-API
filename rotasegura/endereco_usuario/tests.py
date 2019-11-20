@@ -1,11 +1,11 @@
-from django.contrib.auth.models import User
+from users.models import User
 from endereco_usuario.models import EnderecoUsuario
 from rest_framework import status
 from rest_framework.test import APITestCase, APIClient
 
 class EnderecoUsuarioTests(APITestCase):
     def setUp(self):
-        user = User.objects.create(username='testes', password='123', email='testes@email.com')
+        user = User.objects.create(username='testes', password='123', email='testes@email.com', cpf='10907749402')
         user.save()
 
     # Success Tests
@@ -42,7 +42,7 @@ class EnderecoUsuarioTests(APITestCase):
 
         enderecoUsuario = EnderecoUsuario.objects.create(nome='Test 3', latitude='1', longitude='1')
         enderecoUsuario.save()
-        request = client.delete('/api/endereco_usuario/'+str(enderecoUsuario.id)+'/')
+        request = client.delete('/api/endereco_usuario/'+ str(enderecoUsuario.id)+'/')
         self.assertEqual(request.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(EnderecoUsuario.objects.count(), 0)
 

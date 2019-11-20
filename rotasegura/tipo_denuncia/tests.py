@@ -1,11 +1,11 @@
-from django.contrib.auth.models import User
+from users.models import User
 from rest_framework import status
 from rest_framework.test import APITestCase, APIClient
 from tipo_denuncia.models import TipoDenuncia
 
 class TipoDenunciaTests(APITestCase):
     def setUp(self):
-        user = User.objects.create(username='testes', password='123', email='testes@email.com')
+        user = User.objects.create(username='testes', password='123', email='testes@email.com', cpf='10907749402')
         user.save()
 
     # Success Tests

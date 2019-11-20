@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from users.models import User
 from denuncias.models import Denuncia
 from usuario_denuncia.models import UsuarioDenuncia
 from tipo_denuncia.models import TipoDenuncia
@@ -7,7 +7,7 @@ from rest_framework.test import APITestCase, APIClient
 
 class UsuarioDenunciaTests(APITestCase):
     def setUp(self):
-        user = User.objects.create(username='testes', password='123', email='testes@email.com')
+        user = User.objects.create(username='testes', password='123', email='testes@email.com', cpf='10907749402')
         user.save()
         tipoDenuncia = TipoDenuncia.objects.create(descricao='TipoDenunciaTest')
         tipoDenuncia.save()
