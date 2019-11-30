@@ -25,7 +25,7 @@ SECRET_KEY = 'g76kenv2@vr_iwd32bjqj^e0(mu4!ze*cy+!l_2x7az_=lnpgq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0b78a19c.ngrok.io']
+ALLOWED_HOSTS = ['e7762a89.ngrok.io']
 
 
 # Application definition
@@ -46,10 +46,16 @@ INSTALLED_APPS = [
     'usuario_denuncia',
     'frontend',
     'all_denuncias',
-    'users'
+    'users',
+    'usuario_denuncia_imagens'
 ]
 
 AUTH_USER_MODEL = 'users.User'
+
+# MEDIA SETTINGS
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',)

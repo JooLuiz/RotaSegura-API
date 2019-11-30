@@ -10,6 +10,7 @@ django = "*"
 djangorestframework = "*"
 django-rest-knox = "*"
 mysqlclient = {path = "./utils/mysqlclient-1.4.2-cp37-cp37m-win32.whl"}
+pillow = "*"
 
 [requires]
 python_version = "3.7"
