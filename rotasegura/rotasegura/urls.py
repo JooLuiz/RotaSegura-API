@@ -8,5 +8,6 @@ urlpatterns = [
     path('', include('endereco_usuario.urls')),
     path('', include('denuncias.urls')),
     path('', include('usuario_denuncia.urls')),
-    path('', include('all_denuncias.urls'))
+    path('', include('all_denuncias.urls')),
+    path('', include('usuario_denuncia_imagens.urls'))
 ]
