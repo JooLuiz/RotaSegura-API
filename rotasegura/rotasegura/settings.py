@@ -53,7 +53,7 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'users.User'
 
 # MEDIA SETTINGS
-MEDIA_URL = '/media/'
+MEDIA_URL = '/api/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

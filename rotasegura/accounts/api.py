@@ -38,3 +38,16 @@ class UserAPI(generics.RetrieveAPIView):
 
     def get_object(self):
         return self.request.user
+
+#PUT User Api
+class UserUpdateAPI(generics.UpdateAPIView):
+    permission_classes = [
+        permissions.IsAuthenticated,
+    ]
+    serializer_class = UserSerializer
+    
+    def get_object(self):
+        return self.request.user
+
+    def get_queryset(self):
+        return self.request.user

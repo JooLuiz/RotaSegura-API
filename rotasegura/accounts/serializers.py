@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model= User
-        fields = ('id', 'username', 'email')
+        fields = ('id', 'username', 'email', 'cpf', 'avatar', 'background')
 
 
 #Register Serializer
@@ -32,4 +32,4 @@ class LoginSerializer(serializers.Serializer):
         user = authenticate(**data)
         if user and user.is_active:
             return user
-        raise serializers.ValidationError("Incorrect Credential")
+        raise serializers.ValidationError("Usuário ou senha incorretos")

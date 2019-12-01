@@ -19,6 +19,14 @@ def DV_maker(v):
 class User(AbstractUser):
     pass
 
+    def upload_to(instance, filename):
+    	return 'uploads/{cpf}/{filename}'.format(
+        	cpf=instance.cpf, filename=filename)
+
+    def upload_to_background(instance, filename):
+    	return 'uploads/{cpf}/background_{filename}'.format(
+        	cpf=instance.cpf, filename=filename)
+
     def validate_CPF(value):
 	    if value in EMPTY_VALUES:
 	        return u''
@@ -44,3 +52,5 @@ class User(AbstractUser):
 	        return orig_value
 
     cpf = models.CharField(unique=True, max_length=14, validators=[validate_CPF])
+    avatar = models.ImageField(upload_to=upload_to, null=True, blank=True, default='defaultAvatar.jpg')
+    background = models.ImageField(upload_to=upload_to_background, null=True, blank=True, default='defaultBackground.jpg')
