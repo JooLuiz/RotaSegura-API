@@ -13,4 +13,4 @@ class AllDenunciasSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UsuarioDenuncia
-        fields = ['longitude', 'latitude', 'comentario', 'denuncia']
+        fields = ['longitude', 'latitude', 'comentario', 'denuncia', 'data_hora']
