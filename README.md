@@ -2,7 +2,22 @@
 
 O RotaSegura App é um aplicativo destinado à criar rotas seguras para que os cidadãos possam ir de um ponto a outro correndo os menores riscos possíveis.
 
-## Começando
+## Descrição
+
+Rota Segura é um aplicativo móvel desenvolvido como parte do Trabalho de Conclusão de Curso (TCC) de Análise e Desenvolvimento de Sistemas no Instituto Federal de Ciência, Educação e Tecnologia (IFSP), campus Guarulhos. O sistema permite que os usuários façam denúncias de incidentes de segurança e, com base nesses dados, traça rotas mais seguras para outros usuários.
+
+## Funcionalidades
+
+- **Denúncia de Incidentes**: Permite aos usuários denunciar incidentes de segurança em determinadas localidades.
+- **Traçar Rotas**: Com base nas denúncias, o sistema sugere rotas mais seguras para os usuários.
+- **Visualização de Mapa**: Exibe um mapa com os locais das denúncias.
+- **Autenticação de Usuário**: Sistema de login e cadastro de usuários.
+
+## Tecnologias Utilizadas
+
+- **Django**: Framework para desenvolvimento da API.
+
+## Configuração
 
 ### Pré-requisitos
 
@@ -71,19 +86,31 @@ python manage.py runserver
 
 ### Autores
 
-* **João Luiz de Castro** - *Sócio* - [JooLuiz](https://github.com/JooLuiz)
-* **Lucas Carvalho Silta** - *Sócio* - [LucasCarvalho](https://www.linkedin.com/in/lucas-carvalho-silva-9bb30611a/)
+- **Nome**: João Luiz de Castro
+- **Instituição**: Instituto Federal de Ciência, Educação e Tecnologia (IFSP), campus Guarulhos
+- **Ano de Publicação**: 2019
+- **Outros Links**:
+    - [Github](https://github.com/JooLuiz)
+    - [ORCID](https://orcid.org/0009-0003-1669-4633)
+    - [Lattes](http://lattes.cnpq.br/0659061239798618)
+
+- **Nome**: Lucas Carvalho Silva
+- **Instituição**: Instituto Federal de Ciência, Educação e Tecnologia (IFSP), campus Guarulhos
+- **Ano de Publicação**: 2019
+- **Outros Links**:
+    - [Github](https://github.com/Lucas4500)
+    - [Linkedin](https://www.linkedin.com/in/lucas-carvalho-silva-9bb30611a/)
 
 ### Participantes
 
 *  Robson Ferreira Lopes(Orientador) - [Linkedin](https://www.linkedin.com/in/flrobson77/)
 *  Giovanni Fonseca (co-orientador) - [Linkedin](https://www.linkedin.com/in/giovani-fonseca-ravagnani-disperati-a4494571/)
 
-## Licença
-
-Projeto ainda sem Licença.
-
 ## Agradecimentos e Inspirações
 
 * Brad from Traversy Media youtube Channel - [bradtraversy](https://github.com/bradtraversy)
 * Desejamos mudar o mundo para melhor
+
+## Referências
+
+Para mais detalhes sobre o trabalho acadêmico, acesse o documento completo [aqui](https://pergamum.biblioteca.ifsp.edu.br/acervo/77634).
